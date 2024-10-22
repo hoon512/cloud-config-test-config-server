@@ -15,4 +15,9 @@ spring:
         git:
           uri: https://github.com/hoon512/cloud-config-test-config-repo.git
           default-label: main
+          clone-on-start: true # config 복제가 서비스 시작 시 이루어짐
+          timeout: 5 # config repo 와 연결 timeout
+          force-pull: true
+          search-paths:
+            - 'cloud-config-test-server'
 
